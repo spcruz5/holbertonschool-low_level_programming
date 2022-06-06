@@ -1,7 +1,10 @@
+/*C program that prints using puts*/
 #include<stdio.h>
-int main()
+int main(void)
+
 {
-	char line[] = "Programming is like building a multilingual puzzle/n";
+	char line[] = "Programming is like building a multilingual puzzle\n";
+
 	puts(line);
-	return 0;
+	return (0);
 }
