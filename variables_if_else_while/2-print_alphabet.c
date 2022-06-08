@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - Program that print lower case letter
+ *main - C program that print lower case letter
  *
  *Return: 0
  */
