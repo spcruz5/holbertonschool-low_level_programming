@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 
 /**
   * print_alphabet - alphabet
@@ -8,7 +8,7 @@
 
 void print_alphabet(void)
 {
-	char x;
+	int x;
 
 	for (x = 'a'; x <= 'z'; x++)
 	{
