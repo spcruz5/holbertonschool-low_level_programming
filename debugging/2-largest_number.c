@@ -27,5 +27,5 @@ int largest_number(int a, int b, int c)
 
 	putchar(largest);
 
-	return (0);
+	return (largest);
 }
