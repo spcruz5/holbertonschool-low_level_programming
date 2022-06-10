@@ -3,6 +3,7 @@
 /**
 * main - causes an infinite loop
 * Return: 0
+* Needs an increment i++ so that the i=10 and the loop can finish
 */
 
 int main(void)
