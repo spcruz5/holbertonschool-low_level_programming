@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /**
 * main - causes an infinite loop
 * Return: 0
-* Needs an increment i++ so that the i=10 and the loop can finish
+* Need to add i++ to increment and when i=10 the loop closes
 */
 
 int main(void)
@@ -17,8 +18,8 @@ int main(void)
 	{
 		putchar(i);
 	}
-	
+
 	printf("Infinite loop avoided! \\o/\n");
 
-	return (0);
+return (0);
 }
