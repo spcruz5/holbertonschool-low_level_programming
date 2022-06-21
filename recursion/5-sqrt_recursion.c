@@ -12,25 +12,25 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 
-	return (calcuSquare(n, 1));
+	return (calculateSquare(n, 1));
 }
 
 /**
- * calcuSquare - calculates a square root
+ * calculateSquare - calculates a square root
  * @n: number
  * @i: number
  *
  * Return: the square root
  */
 
-int calcuSquare(int n, int i)
+int calculateSquare(int n, int i)
 {
 	if (i <= n)
 	{
 		if (i * i == n)
 			return (i);
 		else
-			return (calcuSquare(n, i + 1));
+			return (calculateSquare(n, i + 1));
 	}
 	else
 		return (-1);
