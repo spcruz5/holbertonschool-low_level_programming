@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#inclide "main.h"
+#include "main.h"
 
 /**
  *alloc_grid - grid of zeros
