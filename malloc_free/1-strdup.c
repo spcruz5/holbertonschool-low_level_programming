@@ -1,18 +1,36 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * main - print name
- * @argc: count
- * @argv: pointer
+ * *_strdup- return pointer
+ * @str: pointer
  *
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+char *_strdup(char *str)
 {
-	(void) argv; /*Ignore argv*/
-	printf("%i\n", argc - 1);
+	char *duplicate;
+	int index, len = 0;
 
-	return (0);
+	if (str == NULL)
+		return (NULL);
+
+	for (index = 0; str[index]; index++)
+	{
+		len++;
+	}
+	
+	duplicate = malloc(sizeof(char) * (len + 1));
+
+	if (duplicate == NULL)
+		return (NULL);
+
+	for (index = 0; str[index]; index++)
+	{
+		duplicate[index] = str[index];
+	}
+	duplicate[len] = '\0';
+
+	return (duplicate);
 }
