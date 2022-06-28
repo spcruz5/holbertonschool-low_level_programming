@@ -2,36 +2,38 @@
 #include <stdlib.h>
 
 /**
- *alloc_grid - grid of zeros
- *@width: width
- *@height: height
- *Return: pointer
- */
+* alloc_grid - Entry point
+* @width: char
+* @height: char
+* Return: Always 0 (Success)
+*/
 
 int **alloc_grid(int width, int height)
 {
-	int **grid, w, h;
+	int i, j, **matrix;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	grid = malloc(sizeof(int *) * height);
-	if (grid == NULL)
+	matrix = (int **)malloc(sizeof(int *) * height);
+	if (matrix == NULL)
 		return (NULL);
 
-	for (h = 0; h < height; h++)
+	for (i = 0; i < height; i++)
 	{
-		grid[h] = malloc(sizeof(int) * width);
-		if (grid[h] == NULL)
+		*(matrix + i) = (int *)malloc(sizeof(int) * width);
+
+		if (*(matrix + i) == NULL)
 		{
-		for (h--; h >= 0; h--)
-			free(grid[h]);
-			free(grid);
+			for (; i >= 0; i--)
+				free(*(matrix + i));
+			free(matrix);
 			return (NULL);
 		}
+
+		for (j = 0; j < width; j++)
+			*(*(matrix + i) + j) = 0;
 	}
-	for (h = 0; h < height; h++)
-		for (w = 0; w < width; w++)
-			grid[h][w] = 0;
-	return (grid);
+	return (matrix);
 }
+
