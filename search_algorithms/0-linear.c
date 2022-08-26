@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search -  fun search for val in array of int 
+ * linear_search -  fun search for val in array of int
  * using Linear search algo
  * @array: ptr to the first element of the array to search in
  * @size: num elements in array
